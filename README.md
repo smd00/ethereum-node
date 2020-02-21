@@ -1,10 +1,9 @@
-## How to Install Parity
+# ethereum-node
 
-To setup the Parity on a Ubuntu 18.04 server follow the steps:
-- Copy files to server (i.e. SFTP via Filezilla)
-    - config.toml
-    - parity.service
-    - setup.sh
+## How to Install an Ethereum node (with Parity)
+
+To setup an Ethereum node on Ubuntu 18.04 follow these steps:
+- Copy repository to server (i.e. SFTP via Filezilla)
 - Run the below commands
 
 ```
