@@ -46,8 +46,8 @@ echo "# SMD00    Copy parity.service and config.toml"
 echo "# END   -----------------------------------------------------------------"
 sudo mkdir /ethdata/io.parity.ethereum
 sudo mkdir -p $HOME/.local/share/io.parity.ethereum/
-cat $HOME/asta/parity.service | sudo tee /etc/systemd/system/parity.service
-cat $HOME/asta/config.toml | sudo tee $HOME/.local/share/io.parity.ethereum/config.toml
+cat $HOME/parity.service | sudo tee /etc/systemd/system/parity.service
+cat $HOME/config.toml | sudo tee $HOME/.local/share/io.parity.ethereum/config.toml
 
 sudo chmod +x /etc/systemd/system/parity.service
 
