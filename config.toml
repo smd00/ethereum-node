@@ -1,0 +1,52 @@
+[parity]
+# Parity continously syncs the chain
+mode = "active"
+# Stable
+release_track = "stable"
+# Blockchain and settings will be stored in /ethdata/io.parity.ethereum.
+base_path = "/ethdata/io.parity.ethereum"
+# Parity databases will be stored in /ethdata/io.parity.ethereum/chains.
+db_path = "/ethdata/io.parity.ethereum/chains"
+# Your encrypted private keys will be stored in /ethdata/io.parity.ethereum/keys.
+keys_path = "/ethdata/io.parity.ethereum/keys"
+
+[ui]
+# Wallet configuration will be stored at /ethdata/io.parity.ethereum/signer.
+path = "/ethdata/io.parity.ethereum/signer"
+
+[ipc]
+# Parity will create an IPC socket at /ethdata/io.parity.ethereum/jsonrpc.ipc.
+path = "/ethdata/io.parity.ethereum/jsonrpc.ipc"
+
+[secretstore]
+# Encrypted secrets will be stored in /ethdata/io.parity.ethereum/secretstore.
+path = "/ethdata/io.parity.ethereum/secretstore"
+
+[misc]
+# Logs will be stored at /ethdata/parity.log.
+log_file = "/ethdata/parity.log"
+
+[rpc]
+# JSON-RPC over HTTP will be accessible on port 3093.
+port = 3093
+#  JSON-RPC will be listening for connections on IP 0.0.0.0.
+interface = "0.0.0.0"
+# Only selected APIs will be exposed over this interface.
+apis = ["web3", "eth", "parity", "personal", "parity_set"]
+
+[websockets]
+#  JSON-RPC will be listening for connections on IP 127.0.0.1.
+interface = "0.0.0.0"
+
+[footprint]
+# Disable tracing.
+tracing = "off"
+# Prune old state data. Maintains journal overlay - fast but extra 50MB of memory used.
+pruning = "fast"
+# Number of threads will vary depending on the workload. Not guaranteed to be faster.
+scale_verifiers = true
+# Initial number of verifier threads
+num_verifiers = 8
+# If defined will never use more then 1024MB for all caches. (Overrides other cache settings).
+cache_size = 1024
+db_compaction = "ssd"
