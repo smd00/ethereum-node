@@ -8,9 +8,7 @@ To setup the Parity on a Ubuntu 18.04 server follow the steps:
 - Run the below commands
 
 ```
-chmod +x ./setup.sh
-
-./setup.sh
+chmod +x ./setup.sh && ./setup.sh
 ```
 
 While the setup script is running, it will attempt to install Rust and that will prompt user input. 
