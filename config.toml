@@ -23,6 +23,8 @@ path = "/ethdata/io.parity.ethereum/jsonrpc.ipc"
 path = "/ethdata/io.parity.ethereum/secretstore"
 
 [misc]
+# Logging pattern (`<module>=<level>`, e.g. `own_tx=trace`).
+#logging = "debug"
 # Logs will be stored at /ethdata/parity.log.
 log_file = "/ethdata/parity.log"
 
