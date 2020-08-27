@@ -3,42 +3,42 @@
 mode = "active"
 # Stable
 release_track = "stable"
-# Blockchain and settings will be stored in /ethdata/io.parity.ethereum.
-base_path = "/ethdata/io.parity.ethereum"
-# Parity databases will be stored in /ethdata/io.parity.ethereum/chains.
-db_path = "/ethdata/io.parity.ethereum/chains"
-# Your encrypted private keys will be stored in /ethdata/io.parity.ethereum/keys.
-keys_path = "/ethdata/io.parity.ethereum/keys"
-
-[ui]
-# Wallet configuration will be stored at /ethdata/io.parity.ethereum/signer.
-path = "/ethdata/io.parity.ethereum/signer"
+# Blockchain and settings will be stored in /dmdata/io.parity.ethereum.
+base_path = "/dmdata/io.parity.ethereum"
+# Parity databases will be stored in /dmdata/io.parity.ethereum/chains.
+db_path = "/dmdata/io.parity.ethereum/chains"
+# Your encrypted private keys will be stored in /dmdata/io.parity.ethereum/keys.
+keys_path = "/dmdata/io.parity.ethereum/keys"
+# Don't save pending local transactions to disk to be restored whenever the node restarts.
+no_persistent_txqueue = true
+public_node = false
 
 [ipc]
-# Parity will create an IPC socket at /ethdata/io.parity.ethereum/jsonrpc.ipc.
-path = "/ethdata/io.parity.ethereum/jsonrpc.ipc"
+disable = false
+# Parity will create an IPC socket at /dmdata/io.parity.ethereum/jsonrpc.ipc.
+path = "/dmdata/io.parity.ethereum/jsonrpc.ipc"
 
 [secretstore]
-# Encrypted secrets will be stored in /ethdata/io.parity.ethereum/secretstore.
-path = "/ethdata/io.parity.ethereum/secretstore"
+# Encrypted secrets will be stored in /dmdata/io.parity.ethereum/secretstore.
+path = "/dmdata/io.parity.ethereum/secretstore"
 
 [misc]
 # Logging pattern (`<module>=<level>`, e.g. `own_tx=trace`).
 #logging = "debug"
-# Logs will be stored at /ethdata/parity.log.
-log_file = "/ethdata/parity.log"
+# Logs will be stored at /dmdata/dm-parity.log.
+log_file = "/dmdata/dm-parity.log"
+color = true
 
 [rpc]
-# JSON-RPC over HTTP will be accessible on port 3093.
-port = 3093
+# JSON-RPC over HTTP will be accessible on port 5011.
+port = 5011
 #  JSON-RPC will be listening for connections on IP 0.0.0.0.
 interface = "0.0.0.0"
 # Only selected APIs will be exposed over this interface.
 apis = ["web3", "eth", "parity", "personal", "parity_set"]
 
 [websockets]
-#  JSON-RPC will be listening for connections on IP 127.0.0.1.
-interface = "0.0.0.0"
+disable = true
 
 [footprint]
 # Disable tracing.
